@@ -337,6 +337,25 @@ document.querySelectorAll('nav ul li a').forEach(link => {
     }else {
         nav.classList.remove('nav-scrolled');
     }
+            Const backToTopBtn = document.getElementById(“backToTop”);
+
+window.onscroll = function() {
+    if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
+        backToTopBtn.style.display = “block”;
+    } else {
+        backToTopBtn.style.display = “none”;
+    }
+};
+
+backToTopBtn.addEventListener(“click”, function() {
+    window.scrollTo({
+        top: 0,
+        behavior: “smooth” // This makes it slide up nicely
+    });
+});
+
+
+
 })
     </script>
     <button id="backToTop" class="back-to-top" title="Go to top">↑</button>
