@@ -305,17 +305,13 @@ box-shadow: 0 0 15px rgba(0, 168, 168, 0.5);
 .prev-btn {left: 0px;}
 .next-btn {right: 0px;}
 
-
-.testimonial-card {
-    min-width: 300px;
-    flex-shrink: 0;
+.testimonial-container {
+    -ms-overflow-style: none;
+scrollbar-width: none;
 }
-
-/* Ensure the slider itself handles the movement smoothly */
-.testimonial-slider {
-  scroll-behavior: smooth; /* This makes the "jump" a smooth slide */
+.testimonial-container::-webkit-scrollbar {
+display: none;
 }
-
 
 /* --- Contact Form --- */
 .contact { padding: 100px 10%; text-align: center; }
