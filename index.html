@@ -338,35 +338,40 @@ document.querySelectorAll('nav ul li a').forEach(link => {
     }else {
         nav.classList.remove('nav-scrolled');
     }
-            Const backToTopBtn = document.getElementById(“backToTop”);
+            Const backToTopBtn = document.getElementById("backToTop");
 
 window.onscroll = function() {
     if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
         backToTopBtn.style.display = “block”;
     } else {
-        backToTopBtn.style.display = “none”;
+        backToTopBtn.style.display = "none";
     }
 };
 
-backToTopBtn.addEventListener(“click”, function() {
+backToTopBtn.addEventListener("click", function() {
     window.scrollTo({
         top: 0,
         behavior: “smooth” // This makes it slide up nicely
     });
 });
-
-Function moveSlider(direction) {
-  Const slider = document.getElementById(‘slider’);
-  Const cardWidth = slider.querySelector(‘.testimonial-card’).offsetWidth + 20; // card + gap
-  
-  // scrollLeft moves the horizontal scrollbar
-  Slider.scrollLeft += direction * cardWidth;
-}
-
-
-
-
-})
+const container = document.querySelector('.testimonial-container');
+const prevbtn =  document.getElementById("prevbtn");
+const nextbtn =  document.getElementById("nextbtn");
+      const scrollAmount = 345;
+   nextbtn.addEventListener('click'), () => {
+       container.scrollBy({
+    right: scrollAmount, 
+        behavior: 'smooth'  
+});
+        });
+        prevbtn.addEventListener('click'), () => {
+       container.scrollBy({
+      left: scrollAmount, 
+        behavior: 'smooth'  
+});
+        });
+         
+        
     </script>
     <button id="backToTop" class="back-to-top" title="Go to top">↑</button>
 </body>
