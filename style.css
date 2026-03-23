@@ -323,14 +323,15 @@ footer {
     background: #f5f3f3;
 }
 
-.social-icons { margin-bottom: 20px; }
-.social-icons a {
-    font-size: 1.5rem;
+.social-icons { margin-bottom: 20px 0; }
+.social-icons i {
+    font-size: 24px;
     margin: 0 15px;
+    color: #333;
     transition: 0.3s;
 }
 
-.social-icons a:hover { color: var(--primary-color); }
+.social-icons i:hover { color: #007bff; }
 
 /* --- Responsive Design --- */
 @media (max-width: 768px) {
