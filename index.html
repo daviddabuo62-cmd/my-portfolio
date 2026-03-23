@@ -355,6 +355,15 @@ backToTopBtn.addEventListener(“click”, function() {
     });
 });
 
+Function moveSlider(direction) {
+  Const slider = document.getElementById(‘slider’);
+  Const cardWidth = slider.querySelector(‘.testimonial-card’).offsetWidth + 20; // card + gap
+  
+  // scrollLeft moves the horizontal scrollbar
+  Slider.scrollLeft += direction * cardWidth;
+}
+
+
 
 
 })
