@@ -255,7 +255,9 @@ input:checked + .slider:before { transform: translateX(26px); }
 
 .testimonials {
     text-align: center;      /* Centers the <h2> title */
-    padding: 50px 20px;     /* Adds some breathing room top and bottom */
+    padding: 40px 20px;
+    width: 100%;
+    /* Adds some breathing room top and bottom */
 }
 
 .testimonial-container {
@@ -268,9 +270,18 @@ input:checked + .slider:before { transform: translateX(26px); }
     max-width: 600px;        /* Keeps the text from getting too wide */
     width: 100%;             /* Ensures it stays responsive on mobile */
     background: rgba(2, 233, 245, 0.712);     /* Or whatever your card color is */
+    color: whtite;
     padding: 30px;
-    border-radius: 10px;
+    border-radius: 15px;
+    width: 80%;
     text-align: center;      /* Centers the quote and name inside the card */
+    box-shadow: 0 4px 15px
+    rgba(0,0,0,0.2);
+}
+@media (max-width: 768px) {
+    .testimonial-card { 
+        width: 95%;
+    }
 }
 .testimonial-container {
     Display: flex;
