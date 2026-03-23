@@ -260,35 +260,36 @@ input:checked + .slider:before { transform: translateX(26px); }
     /* Adds some breathing room top and bottom */
 }
 
-.testimonial-container {
-    display: flex;
-    flex-direction: column;  /* Stacks cards vertically */
-    align-items: center;     /* Centers cards horizontally */
-    gap: 20px;               /* Adds space between the two cards */
+.slider-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
 }
-.testimonial-card {
-    max-width: 600px;        /* Keeps the text from getting too wide */
-    width: 100%;             /* Ensures it stays responsive on mobile */
-    background: rgba(2, 233, 245, 0.712);     /* Or whatever your card color is */
-    color: whtite;
-    padding: 30px;
-    border-radius: 15px;
-    width: 80%;
-    text-align: center;      /* Centers the quote and name inside the card */
-    box-shadow: 0 4px 15px
-    rgba(0,0,0,0.2);
+
+.nav-btn {
+  background: rgba(0, 168, 168, 0.2);
+  color: white;
+  border: none;
+  padding: 15px;
+  cursor: pointer;
+  font-size: 24px;
+  border-radius: 50%;
+  transition: 0.3s;
+  z-index: 10;
+  margin: 0 10px;
 }
-@media (max-width: 768px) {
-    .testimonial-card { 
-        width: 95%;
-    }
+
+.nav-btn:hover {
+  background: #00a8a8;
 }
-.testimonial-container {
-    Display: flex;
-    Justify-content: center; /* Centers cards horizontally */
-    Flex-wrap: wrap;         /* Allows them to wrap to the next line on small screens */
-    Gap: 30px;
+
+/* Ensure the slider itself handles the movement smoothly */
+.testimonial-slider {
+  scroll-behavior: smooth; /* This makes the "jump" a smooth slide */
 }
+
 
 /* --- Contact Form --- */
 .contact { padding: 100px 10%; text-align: center; }
